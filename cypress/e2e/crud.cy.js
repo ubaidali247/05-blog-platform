@@ -1,5 +1,5 @@
-// CRUD Tests - Blog Platform
-describe('CRUD Operations - Blog Platform', () => {
+// CRUD Tests - 05 Blog Platform
+describe('CRUD Operations - 05 Blog Platform', () => {
   beforeEach(() => {
     cy.visit('/');
     cy.get('.nav-link[data-page="posts"]').click();
@@ -105,7 +105,7 @@ describe('CRUD Operations - Blog Platform', () => {
     cy.request({
       method: 'POST',
       url: '/api/posts',
-      body: {"title":"Test Blog Post","content":"This is the post content for testing purposes.","author":"Test Author","category":"Technology","tags":"test,research","status":"published"},
+      body: {"title": "Test Blog Post", "content": "This is the post content.", "author": "Test Author", "category": "Technology", "tags": "test", "status": "published"},
     }).its('status').should('eq', 201);
   });
 
